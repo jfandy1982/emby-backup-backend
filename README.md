@@ -10,6 +10,11 @@ But a few use cases don't yet work for me that perfect. Let's take the detection
 
 It might be wrong to implement that on my own, because there might be already tons of other implementation projects covering the same topic. I see there also a learning possibility to develop in the area of the "cool new stuff" using 'modern' technologies like node.js, typescript and (in parallel repositories) also Angular UI and so on.
 
+This REST-based API is consumed in the following repositories creating an Angular UI on top of the API:
+
+- [Emby Backup Angular UI using Bootstrap](https://github.com/jfandy1982/emby-backup-ui-angular-bootstrap)
+- [Emby Backup Angular UI using Angular Material Design](https://github.com/jfandy1982/emby-backup-ui-angular-material)
+
 ## Installation
 
 - To be defined
