@@ -1,0 +1,48 @@
+{
+  "name": "emby-backup-backend",
+  "version": "1.0.0",
+  "description": "This project contains the backend API for checking the status stored in a personal Emby Server. Please visit the website [emby.media](https://emby.media/) for reading more details about Emby Server.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run eslint && npm run transpile",
+    "eslint": "eslint \"**/*.{js,ts}\"",
+    "eslint:fix": "npm run eslint -- --fix --quiet",
+    "prettier": "prettier \"**/*.{json,md,ts}\"",
+    "prettier-format": "npm run prettier -- --write",
+    "prettier-watch": "onchange \"**/*.{json,md,ts}\" -- prettier --write {{changed}}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfandy1982/emby-backup-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfandy1982/emby-backup-backend/issues"
+  },
+  "homepage": "https://github.com/jfandy1982/emby-backup-backend#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "lint-staged": "^10.2.7",
+    "onchange": "^7.0.2",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{json,md,ts}": [
+      "npm run prettier-format",
+      "npm run eslint",
+      "git add"
+    ]
+  }
+}
