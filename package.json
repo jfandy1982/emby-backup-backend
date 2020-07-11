@@ -18,7 +18,7 @@
 		"url": "git+https://github.com/jfandy1982/emby-backup-backend.git"
 	},
 	"author": "Andreas Ziegler (dev@andreasziegler.net)",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/jfandy1982/emby-backup-backend/issues"
 	},
