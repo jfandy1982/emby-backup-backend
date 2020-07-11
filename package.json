@@ -4,13 +4,12 @@
   "description": "This project contains the backend API for checking the status stored in a personal Emby Server. Please visit the website [emby.media](https://emby.media/) for reading more details about Emby Server.",
   "main": "./src/server.ts",
   "scripts": {
-    "build": "npm run eslint && npm run transpile",
-    "eslint": "eslint \"**/*.ts\"",
+    "prettier": "prettier \"**/*.{css,js,json,md,html,scss,ts}\"",
+    "format": "npm run prettier -- --write",
+    "eslint": "eslint \"**/*.{js,ts}\"",
     "eslint:fix": "npm run eslint -- --fix --quiet",
-    "prettier": "prettier \"**/*.{json,md,ts}\"",
-    "prettier-format": "npm run prettier -- --write",
-    "prettier-watch": "onchange \"**/*.{json,md,ts}\" -- prettier --write {{changed}}",
-    "start-server": "npm run build && node dist/server.js",
+    "validate": "npm run prettier -- --list-different && npm run eslint",
+    "start-server": "npm run transpile && node dist/server.js",
     "start": "nodemon -e ts -w ./ -x npm run start-server",
     "transpile": "tsc"
   },
@@ -53,10 +52,12 @@
     }
   },
   "lint-staged": {
-    "**/*.{json,md,ts}": [
-      "npm run prettier-format",
-      "npm run eslint",
-      "git add"
+    "**/*.{css,js,json,ts}": [
+      "npm run format",
+      "npm run eslint:fix"
+    ],
+    "**/*.{htm,html,md}": [
+      "npm run format"
     ]
   }
 }
