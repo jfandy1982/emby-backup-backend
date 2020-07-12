@@ -13,6 +13,7 @@
 		"start": "nodemon -e ts -w ./ -x npm run start-server",
 		"transpile": "tsc"
 	},
+	"private": true,
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/jfandy1982/emby-backup-backend.git"
@@ -44,6 +45,7 @@
 		"husky": "^4.2.5",
 		"lint-staged": "^10.2.11",
 		"prettier": "^2.0.5",
+		"prettier-eslint": "^11.0.0",
 		"typescript": "^3.9.6"
 	},
 	"husky": {
