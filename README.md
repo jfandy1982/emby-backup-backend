@@ -1,6 +1,6 @@
-# Backend API for a personal Emby Backup Tool
+# Backend API for a personal Emby Data Check Tool
 
-This project contains the backend API for checking the status stored in a personal Emby Server. Please visit the website [emby.media](https://emby.media/) for reading more details about Emby Server.
+This project contains the backend API for checking the data stored in a personal Emby Server. Please visit the website [emby.media](https://emby.media/) for reading more details about Emby Server.
 
 ## Motivation
 
@@ -12,8 +12,8 @@ It might be wrong to implement that on my own, because there might be already to
 
 This REST-based API is consumed in the following repositories creating an Angular UI on top of the API:
 
-- [Emby Backup Angular UI using Bootstrap](https://github.com/jfandy1982/emby-backup-ui-angular-bootstrap)
-- [Emby Backup Angular UI using Angular Material Design](https://github.com/jfandy1982/emby-backup-ui-angular-material)
+- [Emby Data Check Angular UI using Bootstrap](https://github.com/jfandy1982/emby-data-check-ui-angular-bootstrap)
+- [Emby Data Check Angular UI using Angular Material Design](https://github.com/jfandy1982/emby-data-check-ui-angular-material)
 
 ## Installation
 
