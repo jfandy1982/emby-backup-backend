@@ -25,7 +25,7 @@ This REST-based API is consumed in the following repositories creating an Angula
 
 ## License
 
-Check-out the license in the file [LICENSE](LICENSE) within this repository.
+Check-out the license in the file [LICENSE.md](LICENSE.md) within this repository.
 
 ## Contributing
 
