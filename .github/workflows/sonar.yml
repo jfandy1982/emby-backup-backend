@@ -1,4 +1,4 @@
-name: Static code analysis on Sonarcloud.io
+name: Analyze with SonarCloud
 
 on:
   # Push into branches 'main' and 'dev'
@@ -29,5 +29,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-        projectBaseDir: src
