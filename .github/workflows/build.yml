@@ -1,8 +1,15 @@
 name: Build with NPM
 
 on:
+  # Push into branches 'main' and 'dev'
   push:
-    branches: [ $default-branch, dev ]
+    branches: [ main, dev ]
+    paths-ignore:
+    - '**.md'
+    - '**.*ignore'
+  # PR into branch 'main'
+  pull_request:
+    branches: [ main ]
     paths-ignore:
     - '**.md'
     - '**.*ignore'
@@ -13,7 +20,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        # Enable futher node.js versions
+        # - as long as no release is published, only the most current is used
+        node-version: [ 14.x ]
 
     steps:
     - uses: actions/checkout@v2
