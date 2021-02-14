@@ -2,6 +2,15 @@
 
 This project contains the backend API for checking the data stored in a personal Emby Server. Please visit the website [emby.media](https://emby.media/) for reading more details about Emby Server.
 
+![License](https://img.shields.io/github/license/jfandy1982/emby-data-check-backend?logo=GitHub)
+![# GitHub issues](https://img.shields.io/github/issues/jfandy1982/emby-data-check-backend?label=%23%20issues&logo=GitHub)
+![# GitHub forks](https://img.shields.io/github/forks/jfandy1982/emby-data-check-backend?label=%23%20forks&logo=GitHub)
+![# GitHub stars](https://img.shields.io/github/stars/jfandy1982/emby-data-check-backend?label=%23%20stars&logo=GitHub)
+
+![GitHub Workflow Status (Build with NPM:main)](https://img.shields.io/github/workflow/status/jfandy1982/emby-data-check-backend/Build%20with%20NPM?label=build%20workflow&logo=GitHub)
+![GitHub last commit into main](https://img.shields.io/github/last-commit/jfandy1982/emby-data-check-backend?label=last%20commit&logo=GitHub)
+![GitHub commit activity per year](https://img.shields.io/github/commit-activity/y/jfandy1982/emby-data-check-backend?logo=GitHub)
+
 ## Motivation
 
 I am using Emby Server running as application on NAS servers, where also my media files are stored. The Emby Server allows to distribute the media to various devices within the LAN, for example mobile devices or Kodi installations. I see the main advantage in the centralized meta data maintenance.
