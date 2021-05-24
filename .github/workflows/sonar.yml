@@ -1,0 +1,31 @@
+name: Analyze with SonarCloud
+
+on:
+  # Push into branches 'main' and 'dev'
+  push:
+    branches: [main, dev ]
+    paths-ignore:
+    - '**.md'
+    - '**.*ignore'
+  # PR into branch 'main'
+  pull_request:
+    branches: [ main ]
+    types: [opened, synchronize, reopened]
+    paths-ignore:
+    - '**.md'
+    - '**.*ignore'
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@v1.5
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
